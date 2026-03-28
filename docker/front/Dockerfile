@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-COPY ../../front .
+COPY . .
 
 EXPOSE 3000
 
