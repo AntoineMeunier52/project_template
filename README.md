@@ -176,8 +176,8 @@ make logs
 You can run multiple projects:
 
 ```bash
-./bin/init muscu
-./bin/init logopedio
+./bin/init project1
+./bin/init project2
 ```
 
 Result:
