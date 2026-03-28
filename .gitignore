@@ -1,0 +1,8 @@
+.env
+vendor
+node_modules
+.nuxt
+.idea
+.DS_Store
+docker/traefik/certs/*.pem
+docker/traefik/certs/*.key
