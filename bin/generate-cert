@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -e
+
+CERT_DIR="docker/traefik/certs"
+
+mkdir -p "$CERT_DIR"
+
+mkcert -install
+
+mkcert \
+  -cert-file "$CERT_DIR/local.pem" \
+  -key-file "$CERT_DIR/local-key.pem" \
+  localhost \
+  project1.localhost \
+  api-project1.localhost \
+  project2.localhost \
+  api-project2.localhost
+
+echo "Certificats générés dans $CERT_DIR"

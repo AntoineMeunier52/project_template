@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp
+FROM dunglas/frankenphp:1-php8.4-bookworm
 
 WORKDIR /app
 
@@ -8,9 +8,8 @@ RUN apt-get update && apt-get install -y \
     libicu-dev \
     libpq-dev \
     libzip-dev \
-    && docker-php-ext-install \
+    && docker-php-ext-install -j$(nproc) \
     intl \
-    pdo \
     pdo_pgsql \
     zip \
     opcache \
